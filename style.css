@@ -1,0 +1,116 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.6;
+}
+
+.container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    margin: 2rem;
+    text-align: center;
+}
+
+#question {
+    color: #1a365d;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+#progress {
+    color: #4a5568;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+#options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.option {
+    background-color: #f7fafc;
+    color: #2d3748;
+    border: 2px solid #cbd5e0;
+    padding: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+}
+
+.option:hover {
+    background-color: #ebf8ff;
+    border-color: #4299e1;
+    transform: translateY(-2px);
+}
+
+button {
+    background-color: #4299e1;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #3182ce;
+}
+
+button:disabled {
+    background-color: #cbd5e0;
+    cursor: not-allowed;
+}
+
+#restartBtn {
+    background-color: #48bb78;
+    display: none;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+#restartBtn:hover {
+    background-color: #38a169;
+}
+
+.option[style*="lightgreen"] {
+    background-color: #48bb78 !important;
+    border-color: #38a169 !important;
+    color: white;
+}
+
+.option[style*="lightcoral"] {
+    background-color: #f56565 !important;
+    border-color: #e53e3e !important;
+    color: white;
+}
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    
+    #question {
+        font-size: 1.2rem;
+    }
+    
+    .option {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+}
